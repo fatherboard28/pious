@@ -39,6 +39,10 @@ gem "thruster", require: false
 
 # Login Stuff
 gem 'devise'
+gem "omniauth-google-oauth2"
+gem "omniauth-rails_csrf_protection"
+gem 'dotenv'
+gem "bcrypt"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
