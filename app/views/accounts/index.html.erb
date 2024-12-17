@@ -1,0 +1,9 @@
+<h1>Accounts#index</h1>
+<% debug @accounts %>
+<div id="accounts">
+  <% @accounts.each do |account| %>
+    <div>
+      <%= account.name %>
+    </div>
+  <% end %>
+</div>
