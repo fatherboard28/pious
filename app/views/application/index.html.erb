@@ -1,2 +1,6 @@
-<h1>Welcome <%= @current_user.username %>! </h1>
-<% button_to "Logout", logout_path, method: :delete %>
+<div class="container home">
+  <h1>Welcome <%= @current_user.username %>! </h1>
+  <h2>Points: <%= @current_user.points %> </h2>
+  <%= button_to "Add point", '/points', method: :post%>
+  <%= button_to "Logout", logout_path, method: :delete %>
+</div>

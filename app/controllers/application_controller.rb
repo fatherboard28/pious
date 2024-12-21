@@ -15,4 +15,16 @@ class ApplicationController < ActionController::Base
   def logged_in?
     current_user
   end
+
+  def add_points
+    if logged_in?
+     points = @current_user.points
+      if not points
+        points = 0
+      end
+      @current_user.points = points + 1
+      @current_user.save
+    end
+    redirect_back(fallback_location: root_path)
+  end
 end

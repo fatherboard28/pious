@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_17_181132) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_19_222222) do
   create_table "accounts", force: :cascade do |t|
     t.string "name"
     t.integer "streak"
@@ -46,5 +46,8 @@ ActiveRecord::Schema[8.0].define(version: 2024_12_17_181132) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "uid"
+    t.string "provider"
+    t.integer "points"
   end
 end
