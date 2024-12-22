@@ -1,0 +1,28 @@
+.bookrow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.bookrow > h4,button {
+  flex: 1 1 auto;
+  margin: 0 !important;
+}
+
+.bookrow > p{
+  padding-right: 30px !important;
+  margin: 0 !important;
+}
+
+.apphead {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.apphead > h1,h2,button {
+  flex: 1 1 auto;
+}

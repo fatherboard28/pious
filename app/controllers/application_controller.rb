@@ -16,13 +16,29 @@ class ApplicationController < ActionController::Base
     current_user
   end
 
-  def add_points
-    if logged_in?
-     points = @current_user.points
-      if not points
-        points = 0
+  def log_daily_reading
+    add_points(1)
+  end
+
+  def log_bible_reading
+    book = params[:book]
+
+    BOOKS.each do |b|
+      if b[0] == book
+        add_points(b[1])
       end
-      @current_user.points = points + 1
+    end
+  end
+
+  private
+  def add_points(p)
+    Rails.logger.debug "Points: #{p}\n"
+    if logged_in?
+     cur_points = @current_user.points
+      if not cur_points
+        cur_points = 0
+      end
+      @current_user.points = cur_points + p
       @current_user.save
     end
     redirect_back(fallback_location: root_path)

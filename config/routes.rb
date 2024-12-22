@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   get "/signup", to: "users#new"
   post "/signup", to: "users#create"
   get '/auth/:provider/callback', to: 'sessions#omniauth'
-  post '/points', to: 'application#add_points'
+  post '/daily', to: 'application#log_daily_reading'
+  post '/bible', to: 'application#log_bible_reading'
 
   resources :users
 end
