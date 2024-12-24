@@ -2,7 +2,7 @@ BOOKS = [
   [ "Genesis", 15 ],
   [ "Exodus", 15 ],
   [ "Leviticus", 15 ],
-  [ "Number", 15 ],
+  [ "Numbers", 15 ],
   [ "Deuteronomy", 14 ],
   [ "Joshua", 14 ],
   [ "Judges", 14 ],

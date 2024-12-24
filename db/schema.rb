@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2024_12_19_222222) do
+ActiveRecord::Schema[8.0].define(version: 2024_12_23_030514) do
+  create_table "BibleReading", force: :cascade do |t|
+    t.string "book"
+    t.string "uid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "bible_readings", force: :cascade do |t|
+    t.string "book"
+    t.string "uid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "groups", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
