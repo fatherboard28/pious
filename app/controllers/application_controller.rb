@@ -40,6 +40,9 @@ class ApplicationController < ActionController::Base
   # Helper method for getting all books for user
   # returns array of objects in this shape
   # ["book", "point_val", has_read :bool]
+  #
+  # TODO:
+  # - Make block on completeing book lift after 1 year, 1 month or some other thing?
   def user_books
     completed_books = BibleReading.where("uid = ?", @current_user.id).pluck(:book)
     ret = []
